@@ -11,13 +11,13 @@
     },
     "autoload": {
 		"psr-4": {
-			"Komicho\\Laravel\\": "/src"
+			"Komicho\\Laravel\\AutoDeploy\\": "/src"
 		}
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Komicho\\Laravel\\ServiceProvider"
+                "Komicho\\Laravel\\AutoDeploy\\ServiceProvider"
             ]
 		}
 	}

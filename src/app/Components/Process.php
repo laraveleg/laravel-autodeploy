@@ -1,6 +1,6 @@
 <?php
 
-namespace Komicho\Laravel\app\Components;
+namespace Komicho\Laravel\AutoDeploy\app\Components;
 
 class Process
 {

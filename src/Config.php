@@ -1,13 +1,25 @@
 <?php
 
-namespace Komicho\Laravel;
+namespace Komicho\Laravel\AutoDeploy;
 
 class Config implements \ArrayAccess
 {
     private $container = [];
 
     public function __construct() {
-        $this->container = config('komichoautodeploy');
+        // Get config from laravel
+        $config = config('komicho.autodeploy');
+
+        // Set from larave config in container
+        $this->container = $config;
+
+        // Generate deploy command line
+        $this->container['deploy'] = 'git pull '.$config['pull']['origin'].' '.$config['pull']['branch_remote'];
+
+        // check config have tasks or not
+        if (!isset($config['tasks'])) {
+            $this->container['tasks'] = [];
+        }
     }
 
     public function offsetSet($offset, $value) {
