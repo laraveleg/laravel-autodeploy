@@ -7,11 +7,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use Komicho\Laravel\AutoDeploy\Config;
-use Komicho\Laravel\AutoDeploy\app\Components\Process;
+use Komicho\Laravel\AutoDeploy\app\Components\Exec;
 
 class AutoDeployController extends Controller
 {
-    public function deploy(Request $request, Process $process, Config $config)
+    public function deploy(Request $request, Exec $exec, Config $config)
     {
         $commands = [
             'deploy' => $config['deploy']
@@ -21,7 +21,7 @@ class AutoDeployController extends Controller
 
         $outs = [];
         foreach ($commands as $command) {
-            $out = $process->cli($command);
+            $out = $exec->cli($command);
             $outs[$command] = $out;
         }
 
