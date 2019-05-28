@@ -13,6 +13,8 @@ class Config implements \ArrayAccess
         // Set from larave config in container
         $this->container = $config;
 
+        $this->container['payload_token'] = env('KAP_TOKEN', false);
+
         // Generate deploy command line
         $this->container['deploy'] = 'git pull '.$config['pull']['origin'].' '.$config['pull']['branch_remote'];
 
