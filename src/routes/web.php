@@ -4,5 +4,5 @@ Route::group([
     'namespace' => 'Komicho\Laravel\AutoDeploy\app\Http\Controllers',
     'middleware' => 'web'
 ], function () {
-    Route::get('/deploy', 'AutoDeployController@deploy');
+    Route::post('/deploy', 'AutoDeployController@deploy');
 });
