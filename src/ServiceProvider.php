@@ -1,6 +1,6 @@
 <?php
 
-namespace Komicho\Laravel\AutoDeploy;
+namespace LaravelEG\Laravel\AutoDeploy;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -22,7 +22,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../laravel/publishes/config/autodeploy.php' => config_path('komicho/autodeploy.php'),
+            __DIR__.'/../laravel/publishes/config/autodeploy.php' => config_path('laraveleg/autodeploy.php'),
         ]);
 
         $this->loadRoutesFrom(__DIR__.'/routes/web.php');

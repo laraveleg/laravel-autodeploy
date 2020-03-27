@@ -1,9 +1,9 @@
 <?php
 
-namespace Komicho\Laravel\AutoDeploy\App\Http\Middleware;
+namespace LaravelEG\Laravel\AutoDeploy\App\Http\Middleware;
 
 use Closure;
-use Komicho\Laravel\AutoDeploy\Config;
+use LaravelEG\Laravel\AutoDeploy\Config;
 
 class GitLabMiddleware
 {

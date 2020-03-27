@@ -1,13 +1,13 @@
 <?php
 
-namespace Komicho\Laravel\AutoDeploy\App\Http\Controllers;
+namespace LaravelEG\Laravel\AutoDeploy\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-use Komicho\Laravel\AutoDeploy\Config;
-use Komicho\Laravel\AutoDeploy\app\Components\Exec;
+use LaravelEG\Laravel\AutoDeploy\Config;
+use LaravelEG\Laravel\AutoDeploy\app\Components\Exec;
 
 class AutoDeployController extends Controller
 {

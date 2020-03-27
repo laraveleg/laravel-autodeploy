@@ -1,6 +1,6 @@
 <?php
 
-namespace Komicho\Laravel\AutoDeploy;
+namespace LaravelEG\Laravel\AutoDeploy;
 
 class Config implements \ArrayAccess
 {
@@ -8,7 +8,7 @@ class Config implements \ArrayAccess
 
     public function __construct() {
         // Get config from laravel
-        $config = config('komicho.autodeploy');
+        $config = config('laraveleg.autodeploy');
 
         // Set from larave config in container
         $this->container = $config;

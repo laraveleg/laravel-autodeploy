@@ -1,6 +1,6 @@
 <?php
 
-namespace Komicho\Laravel\AutoDeploy\app\Components;
+namespace LaravelEG\Laravel\AutoDeploy\app\Components;
 
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;

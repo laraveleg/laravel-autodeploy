@@ -1,5 +1,5 @@
 {
-    "name": "komicho/laravel-autodeploy",
+    "name": "LaravelEG/laravel-autodeploy",
     "authors": [
         {
             "name": "Karim Mohamed",
@@ -11,13 +11,13 @@
     },
     "autoload": {
 		"psr-4": {
-			"Komicho\\Laravel\\AutoDeploy\\": "/src"
+			"LaravelEG\\Laravel\\AutoDeploy\\": "/src"
 		}
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Komicho\\Laravel\\AutoDeploy\\ServiceProvider"
+                "LaravelEG\\Laravel\\AutoDeploy\\ServiceProvider"
             ]
 		}
 	}
