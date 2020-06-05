@@ -35,3 +35,10 @@ Add a value you choose but you must add this value in a .env file
 ```env
 LARAVELEG_AUTODEPLOY_TOKEN=<SECRET_TOKEN>
 ```
+
+### Git bar
+Can enbale show git bar you wint add new middleware in app/Http/Kernel.php file
+```php
+\LaravelEG\Laravel\AutoDeploy\App\Http\Middleware\LastCommitMiddleware::class
+```
+> This feature does not work in production mode
