@@ -33,5 +33,5 @@ You can use url `<BASE_URL>/api/laraveleg/deploy/gitlab`
 ### Secret Token
 Add a value you choose but you must add this value in a .env file
 ```env
-LARAVEL_AUTODEPLOY_TOKEN=<SECRET_TOKEN>
+LARAVELEG_AUTODEPLOY_TOKEN=<SECRET_TOKEN>
 ```
