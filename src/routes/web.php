@@ -1,9 +1,8 @@
 <?php
 Route::group([
-    'prefix' => 'laraveleg',
-    'namespace' => 'laraveleg\Laravel\AutoDeploy\app\Http\Controllers',
+    'namespace' => '\LaravelEG\Laravel\AutoDeploy\App\Http\Controllers',
     'middleware' => [
-        laraveleg\Laravel\AutoDeploy\app\Http\Middleware\GitLabMiddleware::class
+        \LaravelEG\Laravel\AutoDeploy\App\Http\Middleware\GitLabMiddleware::class
     ]
 ], function () {
     Route::post('/deploy/{provider}', 'AutoDeployController@deploy');

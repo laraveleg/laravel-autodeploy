@@ -21,6 +21,14 @@ Go to `config/laraveleg/autodeploy.php`
 ]
 ```
 
+## Add webhook
+You can add webhook to route file `like routes/web.php`
+```php
+Route::prefix("laraveleg")->group(function () {
+    LaravelEG\Laravel\AutoDeploy\WebHook::init();
+});
+```
+
 ## Integrations with gitlab
 Publishing projects from the repositorie on gitlab.
 
