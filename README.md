@@ -14,15 +14,9 @@ $ composer require laraveleg/laravel-autodeploy
 ### Config file
 Go to `config/laraveleg/autodeploy.php`
 - You can specify the name of the branch you want to pull from:- `'branch_remote' => 'master'`
-- You can specify some tasks to run after pull:- 
-```php
-'tasks' => [
-     //
-]
-```
 
 ## Add webhook
-You can add webhook to route file `like routes/web.php`
+You can add webhook to route file `like routes/api.php`
 ```php
 Route::prefix("laraveleg")->group(function () {
     LaravelEG\Laravel\AutoDeploy\WebHook::init();
@@ -33,7 +27,8 @@ Route::prefix("laraveleg")->group(function () {
 Publishing projects from the repositorie on gitlab.
 
 ### URL (webhook):-
-You can use url `<BASE_URL>/laraveleg/deploy/gitlab`
+You can use url `<BASE_URL>/api/laraveleg/deploy/gitlab`
+> Do not use web middleware
 
 ### Secret Token
 Add a value you choose but you must add this value in a .env file

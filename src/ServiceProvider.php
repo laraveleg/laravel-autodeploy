@@ -11,7 +11,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        // 
+        // $this->commands();
     }
 
     /**
@@ -23,8 +23,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../laravel/publishes/config/autodeploy.php' => config_path('laraveleg/autodeploy.php'),
+            __DIR__.'/../laravel/publishes/storage/afterDeploy.sh' => storage_path('laraveleg/afterDeploy.sh'),
         ]);
-
-        $this->loadRoutesFrom(__DIR__.'/routes/web.php');
     }
 }

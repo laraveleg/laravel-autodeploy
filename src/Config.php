@@ -16,7 +16,7 @@ class Config implements \ArrayAccess
         $this->container['payload_token'] = env('KAP_TOKEN', false);
 
         // Generate deploy command line
-        $this->container['deploy'] = 'git pull '.$config['pull']['origin'].' '.$config['pull']['branch_remote'];
+        $this->container['deploy'] = ['git', 'pull', $config['pull']['origin'], $config['pull']['branch_remote']];
 
         // check config have tasks or not
         if (!isset($config['tasks'])) {
