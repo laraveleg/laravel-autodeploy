@@ -1,6 +1,5 @@
 # LaravelEG Laravel AutoDeploy
 Deploy project after pushed commits.
-> Support `gitlab` for now.
 
 ### Install via composer
 ```
@@ -23,12 +22,14 @@ Route::prefix("laraveleg")->group(function () {
 });
 ```
 
-## Integrations with gitlab
-Publishing projects from the repositorie on gitlab.
+## Integrations with git repository
+Publishing projects from the repository.
 
 ### URL (webhook):-
-You can use url `<BASE_URL>/api/laraveleg/deploy/gitlab`
-> Do not use web middleware
+You can use url `<BASE_URL>/api/laraveleg/deploy/<LARAVELEG_AUTODEPLOY_TOKEN>`
+> Do not use web routes
+
+`LARAVELEG_AUTODEPLOY_TOKEN` It is the secret token in LARAVELEG_AUTODEPLOY_TOKEN value inside `.env` file
 
 ### Secret Token
 Add a value you choose but you must add this value in a .env file

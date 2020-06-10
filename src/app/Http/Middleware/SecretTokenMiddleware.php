@@ -5,7 +5,7 @@ namespace LaravelEG\Laravel\AutoDeploy\App\Http\Middleware;
 use Closure;
 use LaravelEG\Laravel\AutoDeploy\Config;
 
-class GitLabMiddleware
+class SecretTokenMiddleware
 {
     public function __construct(Config $config)
     {
@@ -20,15 +20,12 @@ class GitLabMiddleware
      */
     public function handle($request, Closure $next)
     {
-        $provider = $request->route('provider');
+        $secret_token = $request->route('secret_token');
 
-        if ($provider === 'gitlab') {
-            if ($request->header('X-Gitlab-Token') !== $this->config['payload_token']) {
-                return response('Not valid token provider.', 401);
-            }
-            return $next($request);
+        if ($secret_token !== $this->config['payload_token']) {
+            return response('Not valid token provider.', 401);
         }
-        
-        return response('Unknown provider', 401);
+
+        return $next($request);
     }
 }

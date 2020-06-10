@@ -2,8 +2,8 @@
 Route::group([
     'namespace' => '\LaravelEG\Laravel\AutoDeploy\App\Http\Controllers',
     'middleware' => [
-        \LaravelEG\Laravel\AutoDeploy\App\Http\Middleware\GitLabMiddleware::class
+        \LaravelEG\Laravel\AutoDeploy\App\Http\Middleware\SecretTokenMiddleware::class
     ]
 ], function () {
-    Route::post('/deploy/{provider}', 'AutoDeployController@deploy');
+    Route::post('/deploy/{secret_token}', 'AutoDeployController@deploy');
 });
